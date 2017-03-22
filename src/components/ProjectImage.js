@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Text = styled.h3`
   color: #FFF;
-  width: 100%;
   position: absolute;
   padding: 20px;
 `;
