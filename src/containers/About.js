@@ -57,8 +57,7 @@ class About extends Component {
           </TextWrapper>
           <TextWrapper>
             <P>Some of my work can be seen being used on</P>
-            <P>Twitch broadcasts such as Geoff, Slackaholicus,</P>
-            <P>and BrainsGames.</P>
+            <P>Twitch broadcasts such as Geoff and Slackaholicus. </P>
             <Separator />
             <P>I love learning new programming languages </P>
             <P>and making irc bots with the languages I learn</P>
