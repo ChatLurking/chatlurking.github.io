@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './containers/Header';
+import Gallery from './containers/Projects';
 import About from './containers/About';
 import Skills from './containers/Skills';
-import Projects from './containers/Projects';
+import Contact from './containers/Contacts';
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  width: 100%;
 `;
 
 class App extends Component {
@@ -15,6 +16,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Header />
+        <Gallery />
+        <About />
+        <Skills />
+        <Contact />
       </Wrapper>
     );
   }

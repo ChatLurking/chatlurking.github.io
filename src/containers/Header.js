@@ -3,16 +3,19 @@ import styled from 'styled-components';
 import HeaderPicture from '../components/HeaderPicture';
 import StyledHeaders from '../components/StyledHeaders';
 import StyledH2 from '../components/StyledH2';
-import Projects from './Projects';
 
 const H4 = styled.h4`
-  color: #000;
+  color: #FFF;
   font-size: 1em;
 `;
 
-const NavBar = styled.div`
+const MainWrapper = styled.div`
   display: flex;
-  position: absolute;
+  flex-direction: column;
+  background-color: #5692CD;
+  height: 100vh;
+  width: 100%;
+  align-items: flex-end;
 `;
 
 const Separator = styled.div`
@@ -28,35 +31,33 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100vh;
-  background-color: #5692CD;
+  width: 100%;
 `;
 
 class Header extends Component {
   render() {
     return(
-      <div>
+      <MainWrapper>
         <Wrapper>
           <HeaderPicture />
           <TextWrapper>
             <StyledHeaders
-              color='black'
+              color='white'
               text="Hi! I'm Anne!"
               />
             <StyledH2
-              color='black'
+              color='white'
               text='I do programming things!'
               />
             <Separator />
             <span>
-              <H4>Check out my resume or scroll down to</H4>
-              <H4>learn about the projects I’ve worked on.</H4>
+              <H4>Scroll down to learn about some of</H4>
+              <H4>the projects I’ve worked on.</H4>
             </span>
           </TextWrapper>
         </Wrapper>
-        <Projects />
-      </div>
+      </MainWrapper>
     );
   }
 }

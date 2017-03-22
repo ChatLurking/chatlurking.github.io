@@ -1,73 +1,182 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import StyledHeaders from '../components/StyledHeaders';
 import ProjectImage from '../components/ProjectImage';
-import ProjectImageText from '../components/ProjectImageText';
+import 'font-awesome/css/font-awesome.min.css';
+import FontAwesome from 'react-fontawesome';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom';
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   background-color: #301436;
-  width: 100%;
   height: 100vh;
-  flex: flex-grow;
-  flex-wrap: wrap;
 `;
 
-const defaultProps = {
-  1: {
+const ModalWrapper = styled.div`
+  position: absolute;
+  margin: 20px;
+  background: #EEE;
+  width: 50vw;
+  padding: 30px;
+  border-radius: 10px;
+`;
+
+const Button = styled.button`
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  border-color: #000;
+`;
+
+const defaultProps = [
+  {
+    id: 0,
     name: 'Avalonstar',
-    background: 'https://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: '#123456',
+    desc: "For Christmas Avalonstar left his stream to some trusted community members for 9 days. We were tasked with finding the best solution for people to stream to Avalonstar's Twitch channel without comprimising his stream key. The final solution was to set up ingest servers for people to stream to. These ingest servers used their twitch name as a stream key, this made it easy for us to switch streamers. From the ingest the feed was streamed to a server that then streamed to Twitch. During a lot of the planning I was busy helping admin a 24/7 10 day charity event (iKasperr's Quest For the Cause) my main role was research solutions, testing once the solutions were implemented, and transistioning streamers.",
   },
-  2: {
+  {
+    id: 1,
     name: 'Daktronics Scoreboard',
-    background: 'https://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: 'rgb(0,90,45)',
+    desc: "I was tasked with making a program that would intercept Daktronic scoreboard packets so that a custom scoreboard could be overlayed onto YouTube streams. The challenging part of this project was little information on how the packets were encrypted and how to tell what information was sent. I did enjoy finding out that my office was still in range of the wireless football scoreboard and being able to scare passing students with the airhorn.",
   },
-  3: {
+  {
+    id: 2,
     name: 'Geoff',
-    background: 'http://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: '#CCCCCC',
+    desc: "We were asked to provide a solution that would add bits, subs, resubs, and tips and allocate them to predefined hashtags for voting. This application is limited to only being able to allow 2 or 4 items to be voted on. My role in this project was taking the React/Redux that I learned in the 2 weeks prior and seeing if I could impliment it. Though not much of my code made it into the final project, being able to face a real-world problem was good experience.",
   },
-  4: {
+  {
+    id: 3,
     name: 'Mobile Streaming App',
-    background: 'http://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: 'blue',
+    desc: "After Twitch's announcement of the IRL catagory and seeing not many good mobile streaming options, we decided to make our own. The app is iOS and Android. The feature that I worked on was chat integration and efficiency."
   },
-  5: {
+  {
+    id: 4,
     name: 'Personal Website',
-    background: 'http://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: '#6666FF',
+    desc: "This website is made in React. This is design number 37, and though I'm not completely happy with the design I decided simple was the better option than trying to design something complex that I liked.",
   },
-  6: {
+  {
+    id: 5,
     name: 'Slackaholicus',
-    background: 'http://placekitten.com/480/361',
-    url: 'localhost:3000',
+    background: 'grey',
+    desc: "(In progress) Similar to Geoff's in that it is an application for voting. This application adds a moveable Subscriber/Tip box. I used the base of Geoff's system but added the nessasary features. I redisigned it so that 2-4 items can be voted on at a time.",
   },
-};
+];
+
+const ProjectList = () => {
+    return(
+    <div>
+      {defaultProps.map((item, key) => {
+          return (<Link
+            key={key}
+            to={{
+              pathname: `/project/${item.id}`,
+              state: { modal: true }
+            }}
+            >
+            <ProjectImage
+              key={key}
+              name={item.name}
+              background={item.background}
+            />
+        </Link>
+      )
+    })}
+    </div>
+  );
+}
+
+const Modal = ({ match, history }) => {
+  const project = defaultProps[parseInt(match.params.id, 10)];
+  if (!project) {
+    return null;
+  }
+  const back = (e) => {
+    e.stopPropagation();
+    history.goBack();
+  }
+  return (
+    <ModalWrapper onClick={back}>
+  <div className='modal'>
+    <h1>{project.name}</h1>
+    <div color={project.background} />
+    <div>{project.desc}</div>
+  </div>
+  <Button onClick={back}>
+    <FontAwesome
+      name='close'
+      size='3x'
+    />
+  </Button>
+</ModalWrapper>
+
+  );
+}
+
+const ProjectMatch = ({match}) => {
+  const project = defaultProps[parseInt(match.params.id, 10)];
+
+  if (!project) {
+    return <div>Project not found</div>
+  }
+  return (
+    <ProjectImage
+      background={project.background}
+      name={project.name}
+      key={project.id}
+      />
+  );
+}
 
 class Projects extends Component {
+  previousLocation = this.props.location;
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: null,
-    };
+  componentWillUpdate(nextProps) {
+    const { location } = this.props
+    // set previousLocation if props.location is not modal
+    if (
+      nextProps.history.action !== 'POP' &&
+      (!location.state || !location.state.modal)
+    ) {
+      this.previousLocation = this.props.location
+    }
   }
 
   render() {
-    return(
+    const { location } = this.props;
+    const isModal = !!(
+     location.state &&
+     location.state.modal &&
+     this.previousLocation !== location // not initial render
+   );
+
+    return (
       <Wrapper>
-        <ProjectImage name={defaultProps[1].name} background={defaultProps[1].background} url={defaultProps[1].url} />
-        <ProjectImage name={defaultProps[2].name} background={defaultProps[2].background} url={defaultProps[2].url} />
-        <ProjectImage name={defaultProps[3].name} background={defaultProps[3].background} url={defaultProps[3].url} />
-        <ProjectImage name={defaultProps[4].name} background={defaultProps[4].background} url={defaultProps[4].url} />
-        <ProjectImage name={defaultProps[5].name} background={defaultProps[5].background} url={defaultProps[5].url} />
-        <ProjectImage name={defaultProps[6].name} background={defaultProps[6].background} url={defaultProps[6].url} />
+        <Switch location={isModal ? this.previousLocation : location}>
+          <Route path='/' component={ProjectList} />
+          <Route path='/project/:id' component={ProjectMatch}/>
+        </Switch>
+        {isModal ? <Route path='/project/:id' component={Modal} /> : null}
       </Wrapper>
     );
   }
 }
 
-export default Projects;
+class Gallery extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Route component={Projects} />
+      </BrowserRouter>
+    );
+  }
+}
+
+export default Gallery;

@@ -30,42 +30,42 @@ class Skills extends Component {
     return (
       <Wrapper>
         <StyledHeaders
-          color='black'
+          color='white'
           text='Skills'
           />
         <Separator />
         <TextWrapper>
           <StyledH4
-            color='black'
+            color='white'
             text='Java'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='Javascript (Nodejs)'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='React/Redux'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='C++'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='NoSQL/SQL'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='React-Native'
           />
           <StyledH4
-            color='black'
+            color='white'
             text='GoLang'
           />
           <StyledH4
-            color='black'
-            text='HTML/CSS'
+            color='white'
+            text='HTML'
           />
       </TextWrapper>
       </Wrapper>

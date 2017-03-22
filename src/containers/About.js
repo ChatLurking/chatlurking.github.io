@@ -25,7 +25,7 @@ const TextWrapper = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #301436;
+  background-color: #5692CD;
   width: 100%;
   height: 50vh;
   max-height: 80vh;

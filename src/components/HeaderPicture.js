@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import Brand from '../assets/Brand.png';
 
 const Image = styled.img`
   height: 250px;
-  width: 200px;
-  background: url('https://placekitten.com/200/250');
+  width: 250px;
   margin: 35px;
 `;
 
 const HeaderPicture = () => {
   return (
-    <Image />
+    <Image src={Brand} />
   );
 }
 
