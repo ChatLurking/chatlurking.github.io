@@ -4,14 +4,13 @@ import StyledHeaders from '../components/StyledHeaders';
 import StyledH4 from '../components/StyledH4';
 
 const Separator = styled.div`
-  height: 30px;
+  height: 20px;
 `;
 
 const TextWrapper = styled.div`
   display: flex;
   height: 250px;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 `;
 
