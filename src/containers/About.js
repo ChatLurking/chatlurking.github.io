@@ -59,8 +59,7 @@ class About extends Component {
             <P>Twitch broadcasts such as Geoff and Slackaholicus. </P>
             <Separator />
             <P>I love learning new programming languages </P>
-            <P>and making irc bots with the languages I learn</P>
-            <P>(even if it isn’t the easiest thing to do). </P>
+            <P>and making irc bots with the languages I learn.</P>
           </TextWrapper>
         </AboutWrapper>
       </Wrapper>
