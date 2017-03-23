@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const H2 = styled.h2`
   color: ${props => props.color};
-  font-size: 1.25em;
+  font-size: 1.25rem;
 `;
 
 const StyledH2 = (props) => {

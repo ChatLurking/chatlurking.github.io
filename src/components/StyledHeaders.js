@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const H1 = styled.h1`
   color: ${(props) => props.color};
-  font-size: 1.5em;
+  font-size: 1.75rem;
 `;
 
 const StyledHeaders = (props) => {

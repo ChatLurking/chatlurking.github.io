@@ -15,7 +15,7 @@ const Button = styled.button`
 
 const H4 = styled.h4`
   color: #FFF;
-  font-size: 1em;
+  font-size: 1rem;
 `;
 
 const MainWrapper = styled.div`
@@ -34,6 +34,7 @@ const Separator = styled.div`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 35px;
 `;
 
 const Wrapper = styled.div`

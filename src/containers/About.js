@@ -10,6 +10,7 @@ const AboutWrapper = styled.div`
 
 const P = styled.p`
   color: #FFF;
+  font-size: 1rem;
 `;
 
 const Separator = styled.div`
@@ -19,7 +20,7 @@ const Separator = styled.div`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 30px 60px;
 `;
 
 const Wrapper = styled.div`
@@ -27,7 +28,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   background-color: #5692CD;
   width: 100%;
-  height: 40vh;
+  min-height: 40vh;
   align-items: center;
   justify-content: center;
 `;
@@ -53,8 +54,7 @@ class About extends Component {
             <P>but totally worth it).</P>
             <Separator />
             <P>If I’m not coding I’m transposing music</P>
-            <P>or writing riffs for the next time I pick up one</P>
-            <P>of my saxophones.</P>
+            <P>or writing riffs for the next time I pick up one of my saxophones.</P>
           </TextWrapper>
           <TextWrapper>
             <P>Some of my work can be seen being used on</P>
