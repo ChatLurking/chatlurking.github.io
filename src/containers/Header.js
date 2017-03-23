@@ -10,6 +10,7 @@ import Scroll from 'react-scroll';
 const Button = styled.button`
   background: transparent;
   border-color: transparent;
+  cursor: pointer;
 `;
 
 const H4 = styled.h4`
