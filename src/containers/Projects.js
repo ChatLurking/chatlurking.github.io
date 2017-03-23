@@ -55,7 +55,7 @@ const defaultProps = [
     id: 3,
     name: 'Mobile Streaming App',
     background: 'blue',
-    desc: "After Twitch's announcement of the IRL catagory and seeing not many good mobile streaming options, my start up decided to make our own. The app is iOS and Android. The feature that I worked on was chat integration and efficiency. I currently am in charge of developing the Android part of the app."
+    desc: "After Twitch's announcement of the IRL catagory and seeing not many good mobile streaming options, my start up decided to make our own. In 3 weeks we made an iOS and Android app using react-native. The feature that I worked on the most was chat integration and efficiency. I currently am in charge of developing the Android app and adding new chat features."
   },
   {
     id: 4,
