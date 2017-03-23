@@ -83,7 +83,7 @@ const ProjectList = () => {
             }}
             >
             <ProjectImage
-              key={key}
+              id={key}
               name={item.name}
               background={item.background}
             />
