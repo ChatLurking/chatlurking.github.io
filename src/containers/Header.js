@@ -15,7 +15,7 @@ const Button = styled.button`
 
 const H4 = styled.h4`
   color: #FFF;
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 const MainWrapper = styled.div`
@@ -43,6 +43,10 @@ const Wrapper = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
+
+  @media (max-width: 481px) {
+    flex-direction: column;
+  }
 `;
 const scroll = Scroll.animateScroll;
 class Header extends Component {
