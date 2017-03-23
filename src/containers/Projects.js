@@ -18,10 +18,11 @@ const Wrapper = styled.div`
 const ModalWrapper = styled.div`
   position: absolute;
   margin: 20px;
-  background: #EEE;
+  background: #FFF;
   width: 50vw;
   padding: 30px;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
 `;
 
 const Button = styled.button`
