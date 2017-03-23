@@ -48,7 +48,8 @@ class About extends Component {
           <TextWrapper>
             <P>In college I spent just as much time in the</P>
             <P>computer lab as I did with the Music and</P>
-            <P>Theatre departments.</P>
+            <P>Theatre departments (didn't get much sleep, </P>
+            <P>but totally worth it).</P>
             <Separator />
             <P>If I’m not coding I’m transposing music</P>
             <P>or writing riffs for the next time I pick up one</P>
