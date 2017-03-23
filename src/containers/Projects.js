@@ -37,7 +37,7 @@ const defaultProps = [
     id: 0,
     name: 'Avalonstar',
     background: '#123456',
-    desc: "For Christmas Avalonstar left his stream to some trusted community members for 24/7 9 days. Our start up was tasked with finding the best solution for people to stream to Avalonstar's Twitch channel without comprimising his stream key. The final solution was to set up ingest servers for people to stream to. These ingest servers used their twitch name as a stream key, this made it easy for us to switch streamers. From the ingest the feed was streamed to a server that then streamed to Twitch. During a lot of the planning I was busy helping admin a 24/7 10 day charity event (iKasperr's Quest For the Cause) so my main role was researching solutions, testing once the solutions were implemented, and transistioning streamers during the event.",
+    desc: "For Christmas Avalonstar left his stream to some trusted community members for 24/7 9 days. Our start up was tasked with finding the best solution for people to stream to Avalonstar's Twitch channel without comprimising his stream key. The final solution was to set up ingest servers for people to stream to. These ingest servers used their twitch name as a stream key, this made it easy for us to switch streamers. From the ingest the feed was streamed to a server that then streamed to Twitch. During a lot of the planning I was busy helping admin a 24/7 10 day charity event (iKasperr's Quest For the Cause) so my main role was researching solutions, testing once the solutions were implemented, and transistioning streamers during the event. This event taught me that staying up for almost 20 days is not the best of ideas.",
   },
   {
     id: 1,
