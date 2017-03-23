@@ -61,7 +61,7 @@ const defaultProps = [
     id: 4,
     name: 'Personal Website',
     background: '#6666FF',
-    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing.",
+    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. The repo for this will remain private until I'm done removing all the remnants of its predecessors.",
   },
   {
     id: 5,
