@@ -3,6 +3,14 @@ import styled from 'styled-components';
 import HeaderPicture from '../components/HeaderPicture';
 import StyledHeaders from '../components/StyledHeaders';
 import StyledH2 from '../components/StyledH2';
+import 'font-awesome/css/font-awesome.min.css';
+import FontAwesome from 'react-fontawesome';
+import Scroll from 'react-scroll';
+
+const Button = styled.button`
+  background: transparent;
+  border-color: transparent;
+`;
 
 const H4 = styled.h4`
   color: #FFF;
@@ -15,7 +23,7 @@ const MainWrapper = styled.div`
   background-color: #5692CD;
   height: 100vh;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
 `;
 
 const Separator = styled.div`
@@ -34,11 +42,36 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
 `;
-
+const scroll = Scroll.animateScroll;
 class Header extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      h: 0,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('wheel', this.handleScroll);
+    const height = document.getElementById('container').clientHeight;
+    this.setState({
+      h: height
+    });
+  }
+
+  handleScroll() {
+    document.removeEventListener('wheel', this.handleScroll);
+    scroll.scrollTo(this.state.h, {
+      duration: 500,
+      smooth: true,
+    });
+  }
+
   render() {
     return(
-      <MainWrapper>
+      <MainWrapper id="container">
         <Wrapper>
           <HeaderPicture />
           <TextWrapper>
@@ -57,6 +90,13 @@ class Header extends Component {
             </span>
           </TextWrapper>
         </Wrapper>
+        <Button onClick={this.handleScroll}>
+          <FontAwesome
+            name='angle-double-down'
+            size='4x'
+            style={{margin: '10px', color: '#FFF'}}
+            />
+        </Button>
       </MainWrapper>
     );
   }
