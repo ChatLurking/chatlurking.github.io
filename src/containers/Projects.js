@@ -67,7 +67,7 @@ const defaultProps = [
     id: 5,
     name: 'Slackaholicus',
     background: 'grey',
-    desc: "(In progress) Similar to Geoff's in that it is an application for voting. This application adds a moveable Subscriber/Tip box. I used the base of Geoff's system but added the nessasary features. I redesigned it so that 2-4 items can be voted on at a time.",
+    desc: "(In progress) Similar to Geoff's in that it is an application for voting. This application adds a moveable Subscriber/Tip box. I used the base of Geoff's system and added the nessasary features.",
   },
 ];
 
