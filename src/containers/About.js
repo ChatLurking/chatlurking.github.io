@@ -36,6 +36,7 @@ class About extends Component {
   render() {
     return (
       <Wrapper>
+        <Separator />
         <StyledHeaders
           color='white'
           text='About Me'
