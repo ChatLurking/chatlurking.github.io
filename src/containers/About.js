@@ -6,6 +6,10 @@ import StyledH4 from '../components/StyledH4';
 const AboutWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 481px) {
+    flex-direction: column;
+  }
 `;
 
 const P = styled.p`
