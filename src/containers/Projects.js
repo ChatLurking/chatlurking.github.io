@@ -140,7 +140,7 @@ const Modal = ({ match, history }) => {
       <ModalInside>
         <h1>{project.name}</h1>
         <ImageText>
-          <img src={project.image} style={{'maxWidth': '300px', 'maxHeight': '400px', 'marginRight': '40px'}}/>
+          <img src={project.image} alt='' style={{'maxWidth': '300px', 'maxHeight': '400px', 'marginRight': '40px'}}/>
           <div>{project.desc}</div>
         </ImageText>
       </ModalInside>
