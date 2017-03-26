@@ -2,33 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Text = styled.h3`
-  color: #FFF;
+  color: #CCC;
   position: absolute;
   padding: 20px;
 `;
 
-const Image = styled.img`
-  position: absolute;
-  max-width: 33.3%;
-  max-height: 33.3%;
-  z-index: -1;
-`;
-
 const Wrapper = styled.div`
   background: ${(props) => props.background };
-  width: 33.3%;
+  width: 33.1%;
   padding-bottom: 50vh;
   float: left;
-  opacity: .8;
+  border-color: #EEE;
+  border-style: solid;
+  border-width: .5px;
 
   background-image: ${(props) => `url(${props.image})`};
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-
-  &:hover {
-    opacity: 1;
-  }
 
   @media (max-width: 650px) {
     width: 50%;

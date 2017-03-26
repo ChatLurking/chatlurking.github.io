@@ -22,26 +22,40 @@ const Wrapper = styled.div`
 
 const ModalWrapper = styled.div`
   position: absolute;
-  margin: 20px;
+  margin: 30px;
   background: #FFF;
   width: 75vw;
-  padding: 30px;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 5px 5px 5px black;
 `;
 
-const Button = styled.button`
-  margin-top: 20px;
-  border-radius: 10px;
+const ModalInside = styled.div`
+  padding: 20px;
+`;
+
+const ImageText = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Button = styled.div`
+  margin-left: -13px;
+  margin-top: -15px;
   background-color: transparent;
-  border-color: #000;
+  border-color: transparent;
+  color: #DDD;
+
+  &:hover {
+    color: #FF0000;
+  }
 `;
 
 const defaultProps = [
   {
     id: 0,
     name: 'Avalonstar',
-    background: '#123456',
+    background: '#000',
     image: Avalonstar,
     desc: "For Christmas Avalonstar left his stream to some trusted community members for 24/7 9 days. Our start up was tasked with finding the best solution for people to stream to Avalonstar's Twitch channel without comprimising his stream key. The final solution was to set up ingest servers for people to stream to. These ingest servers used their twitch name as a stream key, this made it easy for us to switch streamers. From the ingest the feed was streamed to a server that then streamed to Twitch. During a lot of the planning I was busy helping admin a 24/7 10 day charity event (iKasperr's Quest For the Cause) so my main role was researching solutions, testing once the solutions were implemented, and transistioning streamers during the event. This event taught me that staying up for almost 20 days is not the best of ideas.",
   },
@@ -55,7 +69,7 @@ const defaultProps = [
   {
     id: 2,
     name: 'Geoff',
-    background: '#CCCCCC',
+    background: '#000',
     image: Geoff,
     desc: "My start up was asked to provide a solution that would add bits, subs, resubs, and tips and allocate them to predefined hashtags for voting. This application is limited to only being able to allow 2 or 4 items to be voted on. My role in this project was taking the React/Redux that I learned in the 2 weeks prior and seeing if I could implement it. Though not much of my code made it into the final project, being able to face a real-world problem using my new skills was good experience.",
   },
@@ -69,14 +83,14 @@ const defaultProps = [
   {
     id: 4,
     name: 'Personal Website',
-    background: '#6666FF',
+    background: '#000',
     image: Website,
     desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. The repo for this will remain private until I'm done removing all the remnants of its predecessors.",
   },
   {
     id: 5,
     name: 'Slackaholicus',
-    background: 'grey',
+    background: '#000',
     image: Slack,
     desc: "(In progress) Similar to Geoff's in that it is an application for voting. This application adds a moveable Subscriber/Tip box. I used the base of Geoff's system and added the nessasary features.",
   },
@@ -117,18 +131,19 @@ const Modal = ({ match, history }) => {
   }
   return (
     <ModalWrapper onClick={back}>
-      <div className='modal'>
-        <h1>{project.name}</h1>
-        <img src={project.image} style={{'max-width': '300px', 'max-height': '400px'}}/>
-        <div color={project.background} />
-        <div>{project.desc}</div>
-      </div>
       <Button onClick={back}>
         <FontAwesome
           name='close'
-          size='3x'
+          size='2x'
           />
       </Button>
+      <ModalInside>
+        <h1>{project.name}</h1>
+        <ImageText>
+          <img src={project.image} style={{'maxWidth': '300px', 'maxHeight': '400px', 'marginRight': '40px'}}/>
+          <div>{project.desc}</div>
+        </ImageText>
+      </ModalInside>
     </ModalWrapper>
   );
 }
@@ -145,7 +160,7 @@ const ProjectMatch = ({match}) => {
       name={project.name}
       key={project.id}
       image={project.image}
-      />
+    />
   );
 }
 

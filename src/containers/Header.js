@@ -96,7 +96,7 @@ class Header extends Component {
             </span>
           </TextWrapper>
         </Wrapper>
-        <Button onClick={this.handleScroll}>
+        <Button>
           <FontAwesome
             name='angle-double-down'
             size='4x'

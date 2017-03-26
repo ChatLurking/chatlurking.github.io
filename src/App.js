@@ -5,6 +5,7 @@ import Gallery from './containers/Projects';
 import About from './containers/About';
 import Skills from './containers/Skills';
 import Contact from './containers/Contacts';
+import { SectionsContainer, Section } from 'react-fullpage';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -12,14 +13,27 @@ const Wrapper = styled.div`
 `;
 
 class App extends Component {
+
   render() {
+    const options = {
+      sectionClassName:     'section',
+      anchors:              ['Header', 'Projects', 'About'],
+      scrollBar:            false,
+      navigation:           true,
+      verticalAlign:        false,
+      arrowNavigation:      true,
+    };
     return (
       <Wrapper>
-        <Header />
-        <Gallery />
-        <About />
-        <Skills />
-        <Contact />
+        <SectionsContainer {...options}>
+          <Section><Header /></Section>
+          <Section><Gallery /></Section>
+          <Section>
+            <About />
+            <Skills />
+            <Contact />
+          </Section>
+        </SectionsContainer>
       </Wrapper>
     );
   }
