@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     const options = {
       sectionClassName:     'section',
-      anchors:              ['Header', 'Projects', 'About'],
+      anchors:              ['', '', ''],
       scrollBar:            false,
       navigation:           false,
       verticalAlign:        false,
