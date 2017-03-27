@@ -19,7 +19,7 @@ class App extends Component {
       sectionClassName:     'section',
       anchors:              ['Header', 'Projects', 'About'],
       scrollBar:            false,
-      navigation:           true,
+      navigation:           false,
       verticalAlign:        false,
       arrowNavigation:      true,
     };

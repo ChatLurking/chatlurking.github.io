@@ -13,6 +13,7 @@ import Avalonstar from '../assets/Avalonstar.png';
 import Geoff from '../assets/Geoff.png';
 import Slack from '../assets/Slack.png';
 import Website from '../assets/Website.png';
+import Daktronic from '../assets/Daktronic.png';
 import Code from '../assets/Code.png';
 
 const Wrapper = styled.div`
