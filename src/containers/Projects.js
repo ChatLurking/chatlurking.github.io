@@ -18,14 +18,15 @@ import Code from '../assets/Code.png';
 
 const Wrapper = styled.div`
   background-color: #301436;
-  height: 100vh;
+  overflow: hidden
 `;
 
 const ModalWrapper = styled.div`
   position: absolute;
-  margin: 30px;
+  padding: 30px;
   background: #FFF;
-  width: 75vw;
+  width: 100vw;
+  height: 100vh;
   border-radius: 4px;
   box-shadow: 5px 5px 5px black;
 `;
@@ -34,10 +35,16 @@ const ModalInside = styled.div`
   padding: 20px;
 `;
 
+const ModalText = styled.p`
+  padding: 20px 0px;
+  margin-right: 20px;
+`;
+
 const ImageText = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: space-between;
+
 `;
 
 const Button = styled.div`
@@ -86,7 +93,7 @@ const defaultProps = [
     name: 'Personal Website',
     background: '#000',
     image: Website,
-    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. The repo for this will remain private until I'm done removing all the remnants of its predecessors.",
+    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. This will be worked on in my spare time to make it look better :)",
   },
   {
     id: 5,
@@ -141,8 +148,8 @@ const Modal = ({ match, history }) => {
       <ModalInside>
         <h1>{project.name}</h1>
         <ImageText>
-          <img src={project.image} alt='' style={{'maxWidth': '300px', 'maxHeight': '400px', 'marginRight': '40px'}}/>
-          <div>{project.desc}</div>
+          <img src={project.image} alt='' style={{'maxWidth': '500px', 'maxHeight': '720px', 'marginRight': '40px'}}/>
+          <ModalText>{project.desc}</ModalText>
         </ImageText>
       </ModalInside>
     </ModalWrapper>
