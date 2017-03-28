@@ -4,14 +4,13 @@ import HeaderPicture from '../components/HeaderPicture';
 import StyledHeaders from '../components/StyledHeaders';
 import StyledH2 from '../components/StyledH2';
 import 'font-awesome/css/font-awesome.min.css';
-import FontAwesome from 'react-fontawesome';
 import Scroll from 'react-scroll';
 
-const Button = styled.button`
-  background: transparent;
-  border-color: transparent;
-  cursor: pointer;
-`;
+// const Button = styled.button`
+//   background: transparent;
+//   border-color: transparent;
+//   cursor: pointer;
+// `;
 
 const H4 = styled.h4`
   color: #FFF;
