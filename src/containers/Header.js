@@ -96,13 +96,6 @@ class Header extends Component {
             </span>
           </TextWrapper>
         </Wrapper>
-        <Button>
-          <FontAwesome
-            name='angle-double-down'
-            size='4x'
-            style={{margin: '10px', color: '#FFF'}}
-            />
-        </Button>
       </MainWrapper>
     );
   }
