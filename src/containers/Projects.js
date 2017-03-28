@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 const ModalWrapper = styled.div`
   position: absolute;
   padding: 30px;
-  background: #FFF;
+  background: #DDD;
   width: 100vw;
   height: 100vh;
   border-radius: 4px;
@@ -52,7 +52,7 @@ const Button = styled.div`
   margin-top: -15px;
   background-color: transparent;
   border-color: transparent;
-  color: #DDD;
+  color: #FF0000;
 
   &:hover {
     color: #FF0000;
@@ -93,7 +93,7 @@ const defaultProps = [
     name: 'Personal Website',
     background: '#000',
     image: Website,
-    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. This will be worked on in my spare time to make it look better :)",
+    desc: "This website is made in React using create-react-app. This is design number 37 (or so), and though I'm not completely happy with the design I decided that this was better than nothing. This will be worked on in my spare time to make it look and make the scrolling work better :)",
   },
   {
     id: 5,
