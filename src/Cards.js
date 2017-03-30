@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   color: #DDD;
+  margin: 10px;
 
   @media(max-width: 720px) {
     flex-direction: column;
@@ -17,26 +18,27 @@ const Image = styled.img`
   height: 300px;
   user-select: none;
   pointer-events: none;
+  box-shadow: 10px 10px 0px #444;
 `;
 
 const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 250px;
+  max-width: 500px;
+  max-height: 275px;
   background-image: url(${SVG});
   background-color: #222;
   word-break: normal;
+  box-shadow: 10px 10px 0px #444;
 
   @media(max-width: 720px) {
-    width: 250px;
-    height: auto;
+    width: 275px;
+    max-height: 500px;
   }
 `;
 
 const TextWrapper = styled.div`
   margin-left: 10px;
-  height: 400px;
   padding: 0 10px 0px;
 `;
 
@@ -64,18 +66,33 @@ const Separator = styled.div`
 `;
 
 const Cards = (props) => {
-  return (
-    <Wrapper>
-      <Image src={props.src} alt='' />
-      <TextDiv>
-        <TextWrapper>
-          <Title>{props.title}</Title>
-          <Separator />
-          <Text>{props.text}</Text>
-        </TextWrapper>
-      </TextDiv>
-    </Wrapper>
-  );
+  if (props.side === 'right' || props.size === 'mobile'){
+    return (
+      <Wrapper>
+        <Image src={props.src} alt='' />
+        <TextDiv>
+          <TextWrapper>
+            <Title>{props.title}</Title>
+            <Separator />
+            <Text>{props.text}</Text>
+          </TextWrapper>
+        </TextDiv>
+      </Wrapper>
+    );
+  } else {
+    return (
+      <Wrapper>
+        <TextDiv>
+          <TextWrapper>
+            <Title>{props.title}</Title>
+            <Separator />
+            <Text>{props.text}</Text>
+          </TextWrapper>
+        </TextDiv>
+        <Image src={props.src} alt='' />
+      </Wrapper>
+    );
+  }
 }
 
 export default Cards;
