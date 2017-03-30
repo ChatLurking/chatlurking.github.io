@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Brand from './assets/brand.png';
-import FontAwesome from 'react-fontawesome';
 
 const Wrapper = styled.div`
   display: flex;
