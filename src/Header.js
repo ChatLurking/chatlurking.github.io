@@ -4,6 +4,7 @@ import Brand from './assets/brand.png';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   background: #222;
   height: 450px;
@@ -11,21 +12,17 @@ const Wrapper = styled.div`
   margin: 0;
   padding: 30px;
   overflow: hidden;
-  z-index: -10;
 
-  @media(max-width: 480px) {
-    height: 450px;
-    flex-direction: column;
+  @media(min-width: 720px) {
+    flex-direction: row-reverse;
+    justify-content: space-around;
   }
 `;
+
 
 const HireMeDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 40px;
-  padding-right: 60px;
-  border-right: thin solid #9eb5cd;
 
   @media(max-width: 480px) {
     margin: 0px;
@@ -36,20 +33,44 @@ const HireMeDiv = styled.div`
     border-bottom: thin solid #9eb5cd;
     align-items: center;
   }
-`;
 
-const CTAWrapper = styled.div`
-  margin-left: 60px;
-  text-align: center;
-
-  @media(max-width: 480px) {
+  @media(max-width: 600px) {
     margin: 0px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
+    padding: 0px;
+    padding-bottom: 40px;
+    width: 75%;
+    border-right: none;
+    border-bottom: thin solid #9eb5cd;
     align-items: center;
   }
 
+  @media(min-width: 720px) {
+    margin-right: 40px;
+    padding-left: 100px;
+    border-left: thin solid #9eb5cd;
+  }
+`;
+
+const CTAWrapper = styled.div`
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media(min-width: 720px) {
+
+  }
+
+
+`;
+
+const H1 = styled.h1`
+  font-size: 3rem;
+  margin: 10px 0;
+
+  @media(max-width: 720px) {
+    text-align: left;
+  }
 `;
 
 const Button = styled.button`
@@ -61,17 +82,10 @@ const Button = styled.button`
   border: solid;
   border-color: #FFF;
   border-radius: 20px;
-  margin-right: 50px;
   text-align: center;
   vertical-align: middle;
-
+  margin-bottom: 15px;
   cursor: pointer;
-
-  @media(max-width: 480) {
-    margin: 0;
-    margin-bottom: 30px;
-    width: 200px;
-  }
 `;
 
 const ButtomLM = styled(Button)`
@@ -87,7 +101,7 @@ const ButtomLM = styled(Button)`
 
   &:hover&:before {
     opacity: 1;
-    width: 220px;
+    width: 230px;
   }
 
   &:hover {
@@ -112,7 +126,7 @@ class Header extends Component {
           <h2 style={{margin: '0'}}>PROGRAMMER</h2>
         </HireMeDiv>
         <CTAWrapper>
-          <h1 style={{fontSize: '3rem', margin: '10px 0', textAlign: 'left'}}>ANNE GLINES</h1>
+          <H1>ANNE GLINES</H1>
           <ButtonHire>Hire me</ButtonHire>
           <ButtomLM>Learn More</ButtomLM>
         </CTAWrapper>
