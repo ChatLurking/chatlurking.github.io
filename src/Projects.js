@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px;
 `;
 
 
@@ -54,7 +55,7 @@ const project = [
   },
   {
     id: 5,
-    name: 'Daktronics Scoreboard Backend',
+    name: 'Daktronics Scoreboard',
     // background: '#000',
     image: Dak,
     desc: "I was tasked with making a program that would intercept Daktronic scoreboard packets so that a custom scoreboard could be overlayed onto YouTube streams. The challenging part of this project was little information on how the packets were encrypted and how to tell what information was sent. I did enjoy finding out that my office was still in range of the wireless football scoreboard and being able to scare passing students with the airhorn.",
