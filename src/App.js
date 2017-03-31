@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './Header';
-import Separator from './Separator';
 import Projects from './Projects';
-
+import Footer from './Footer';
+import Skill from './Skill';
 
 const Wrapper = styled.div`
 `;
@@ -14,8 +14,9 @@ class App extends Component {
     return (
       <Wrapper>
         <Header />
-        <Separator />
+        <Skill />
         <Projects />
+        <Footer />
       </Wrapper>
     );
   }
