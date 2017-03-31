@@ -18,7 +18,7 @@ const Image = styled.img`
   height: 300px;
   user-select: none;
   pointer-events: none;
-  box-shadow: 10px 10px 0px #444;
+  box-shadow: 5px 5px 2px #444;
 `;
 
 const TextDiv = styled.div`
@@ -29,7 +29,7 @@ const TextDiv = styled.div`
   background-image: url(${SVG});
   background-color: #222;
   word-break: normal;
-  box-shadow: 10px 10px 0px #444;
+  box-shadow: 5px 5px 2px #444;
 
   @media(max-width: 720px) {
     width: 275px;
