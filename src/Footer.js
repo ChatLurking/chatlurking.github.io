@@ -20,16 +20,17 @@ const Button = styled.a`
   cursor: pointer;
 `;
 
-const ButtonHM = styled.button`
+const ButtonHM = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.25rem;
-  width: 250px;
+  width: 300px;
   height: 40px;
   border: solid;
   border-radius: 20px;
-  text-align: center;
-  vertical-align: middle;
+  margin-bottom: 15px;
   cursor: pointer;
-
   background: #D9AA63;
   border-color: #D9AA63;
   color: #000;
@@ -44,7 +45,7 @@ const Footer = () => {
             size='4x'
             />
         </Button>
-        <ButtonHM onClick={() => location.href='mailto:anneglines@gmail.com'}>Hire Me</ButtonHM>
+        <ButtonHM href="mailto:anneglines@gmail.com?subject=Let's work together"><span>Hire me</span></ButtonHM>
       </Wrapper>
   );
 }

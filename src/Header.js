@@ -111,7 +111,17 @@ const ButtomLM = styled(Button)`
   }
 `;
 
-const ButtonHire = styled(Button)`
+const ButtonHire = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 300px;
+  height: 40px;
+  border: solid;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
   background: #D9AA63;
   border-color: #D9AA63;
   color: #000;
@@ -151,7 +161,7 @@ class Header extends Component {
         </HireMeDiv>
         <CTAWrapper>
           <H1>ANNE GLINES</H1>
-          <ButtonHire onClick={() => location.href='mailto:anneglines@gmail.com'}>Hire me</ButtonHire>
+          <ButtonHire href="mailto:anneglines@gmail.com?subject=Let's work together"><span>Hire me</span></ButtonHire>
           <ButtomLM onClick={this.animatedScrolling}>Learn More</ButtomLM>
         </CTAWrapper>
       </Wrapper>
