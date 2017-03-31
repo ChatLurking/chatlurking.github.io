@@ -45,8 +45,7 @@ const HireMeDiv = styled.div`
   }
 
   @media(min-width: 720px) {
-    margin-right: 40px;
-    padding-left: 100px;
+    padding-left: 150px;
     border-left: thin solid #9eb5cd;
   }
 `;
@@ -122,7 +121,7 @@ class Header extends Component {
     return (
       <Wrapper>
         <HireMeDiv>
-          <img src={Brand} alt='' style={{marginTop: '20px', width: '180px', height: '180px', pointerEvents: 'none', userSelect: 'none'}} />
+          <img src={Brand} alt='' style={{width: '180px', height: '180px', pointerEvents: 'none', userSelect: 'none'}} />
           <h2 style={{margin: '0'}}>PROGRAMMER</h2>
         </HireMeDiv>
         <CTAWrapper>
