@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 
   @media(max-width: 480px) {
     flex-direction: column;
-
   }
 `;
 
@@ -26,7 +25,8 @@ const LanguageWrapper = styled.div`
 
 const UL = styled.ul`
   list-style: none;
-  padding: 20px 0px;
+  padding: 2px 0px;
+  margin: 2px 0px;
 
   @media(max-width: 480px) {
     text-align: left;
@@ -70,7 +70,7 @@ const Skill = (props) => {
       </LanguageWrapper>
       <LanguageWrapper>
         <H3>Mobile Development</H3>
-        <Separator />
+      <Separator style={{width: '45px'}}/>
         <CenterUL>
           <li>Android</li>
           <li>React-Native</li>
@@ -78,7 +78,7 @@ const Skill = (props) => {
       </LanguageWrapper>
       <LanguageWrapper>
         <H3>Other Languages</H3>
-        <Separator />
+      <Separator style={{width: '32px'}} />
         <RightUL>
           <li>C#</li>
           <li>Java</li>
