@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import Brand from './assets/brand.png';
 
 const Wrapper = styled.div`
@@ -12,6 +13,7 @@ const Wrapper = styled.div`
   margin: 0;
   padding: 30px;
   overflow: hidden;
+  margin-bottom: 350px;
 
   @media(min-width: 720px) {
     flex-direction: row-reverse;
@@ -115,11 +117,34 @@ border-color: #D9AA63;
 color: #000;
 `;
 
-
+const scroll = Scroll.animateScroll;
 class Header extends Component {
+  constructor() {
+    super();
+    this.animatedScrolling = this.animatedScrolling.bind(this);
+
+    this.state = {
+      h: 0,
+    };
+  }
+
+  componentDidMount() {
+    const height = document.getElementById('container').clientHeight + 350;
+    this.setState({
+      h: height,
+    });
+  }
+
+  animatedScrolling() {
+    scroll.scrollTo(this.state.h, {
+      duration: 500,
+      smooth: true,
+    });
+  }
+
   render() {
     return (
-      <Wrapper>
+      <Wrapper id="container">
         <HireMeDiv>
           <img src={Brand} alt='' style={{width: '180px', height: '180px', pointerEvents: 'none', userSelect: 'none'}} />
           <h2 style={{margin: '0'}}>PROGRAMMER</h2>
@@ -127,7 +152,7 @@ class Header extends Component {
         <CTAWrapper>
           <H1>ANNE GLINES</H1>
           <ButtonHire>Hire me</ButtonHire>
-          <ButtomLM>Learn More</ButtomLM>
+          <ButtomLM onClick={this.animatedScrolling}>Learn More</ButtomLM>
         </CTAWrapper>
       </Wrapper>
     );
