@@ -87,6 +87,7 @@ const Button = styled.button`
   vertical-align: middle;
   margin-bottom: 15px;
   cursor: pointer;
+  font-family: 'Lato', sans-serif;
 `;
 
 const ButtomLM = styled(Button)`
