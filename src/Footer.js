@@ -44,7 +44,7 @@ const Footer = () => {
             size='4x'
             />
         </Button>
-        <ButtonHM>Hire Me</ButtonHM>
+        <ButtonHM onClick={() => location.href='mailto:anneglines@gmail.com'}>Hire Me</ButtonHM>
       </Wrapper>
   );
 }

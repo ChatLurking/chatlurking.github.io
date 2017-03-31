@@ -112,9 +112,9 @@ const ButtomLM = styled(Button)`
 `;
 
 const ButtonHire = styled(Button)`
-background: #D9AA63;
-border-color: #D9AA63;
-color: #000;
+  background: #D9AA63;
+  border-color: #D9AA63;
+  color: #000;
 `;
 
 const scroll = Scroll.animateScroll;
@@ -137,7 +137,7 @@ class Header extends Component {
 
   animatedScrolling() {
     scroll.scrollTo(this.state.h, {
-      duration: 500,
+      duration: 1000,
       smooth: true,
     });
   }
@@ -151,7 +151,7 @@ class Header extends Component {
         </HireMeDiv>
         <CTAWrapper>
           <H1>ANNE GLINES</H1>
-          <ButtonHire>Hire me</ButtonHire>
+          <ButtonHire onClick={() => location.href='mailto:anneglines@gmail.com'}>Hire me</ButtonHire>
           <ButtomLM onClick={this.animatedScrolling}>Learn More</ButtomLM>
         </CTAWrapper>
       </Wrapper>
