@@ -1,39 +1,22 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Header from './containers/Header';
-import Gallery from './containers/Projects';
-import About from './containers/About';
-import Skills from './containers/Skills';
-import Contact from './containers/Contacts';
-import { SectionsContainer, Section } from 'react-fullpage';
+import Header from './Header';
+import Projects from './Projects';
+import Footer from './Footer';
+import Skill from './Skill';
 
 const Wrapper = styled.div`
-  height: 100vh;
-  width: 100%;
 `;
 
-class App extends Component {
 
+class App extends Component {
   render() {
-    const options = {
-      sectionClassName:     'section',
-      anchors:              ['', '', ''],
-      scrollBar:            false,
-      navigation:           false,
-      verticalAlign:        false,
-      arrowNavigation:      true,
-    };
     return (
       <Wrapper>
-        <SectionsContainer {...options}>
-          <Section><Header /></Section>
-          <Section><Gallery /></Section>
-          <Section>
-            <About />
-            <Skills />
-            <Contact />
-          </Section>
-        </SectionsContainer>
+        <Header />
+        <Skill />
+        <Projects />
+        <Footer />
       </Wrapper>
     );
   }
