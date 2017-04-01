@@ -40,10 +40,10 @@ const About = () => {
       <H3>Hi! I'm Anne!</H3>
       <Separator />
       <P>
-        I've been developing solutions (mostly Java based) fro about 3 years. Currently I develop solutions using React/Redux and React-Native combined with Android. In college I spent a lot of time studying U/X and computer networking. I love learning and working with new languages!
+        I've been developing solutions (mostly Java based) for about 3 years. Currently I develop solutions using React/Redux and React-Native combined with Android. In college I spent a lot of time studying UX and computer networking. I love learning and working with new languages!
       </P>
       <P>
-        In my free time I enjoy writing and transposing music and doing chord analisys as I do it. I also enjoy dabbling in Android apps and mobile U/X design.
+        In my free time I enjoy writing and transposing music and doing chord analisys as I do it. I also enjoy dabbling in Android apps and mobile UX design.
       </P>
     </Wrapper>
   );
