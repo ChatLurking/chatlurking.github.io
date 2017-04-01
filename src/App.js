@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import Projects from './Projects';
 import Footer from './Footer';
+import About from './About';
 import Skill from './Skill';
 
 const Wrapper = styled.div`
@@ -44,6 +45,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Header />
+        <About />
         <Skill />
         <Projects
           mobile={this.state.w}
