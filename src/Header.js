@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   margin: 0;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 350px;
+  margin-bottom: 300px;
 
   @media(min-width: 720px) {
     flex-direction: row-reverse;
@@ -26,8 +26,6 @@ const HireMeDiv = styled.div`
   flex-direction: column;
 
   @media(max-width: 480px) {
-    margin: 0px;
-    padding: 0px;
     padding-bottom: 40px;
     width: 75%;
     border-right: none;
@@ -57,8 +55,8 @@ const CTAWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media(min-width: 720px) {
-
+  @media(max-width: 720px) {
+    margin-bottom: 30px;
   }
 
 
@@ -89,12 +87,23 @@ const ButtonHire = styled.a`
   color: #000;
 `;
 
+const Image = styled.img`
+  width: 180px;
+  height: 180px;
+  pointerEvents: none;
+  userSelect: none;
+
+  @media(max-width: 720px) {
+    margin-top: 30px;
+  }
+`;
+
 class Header extends Component {
   render() {
     return (
       <Wrapper id="container">
         <HireMeDiv>
-          <img src={Brand} alt='' style={{width: '180px', height: '180px', pointerEvents: 'none', userSelect: 'none'}} />
+          <Image src={Brand} alt='' />
           <h2 style={{margin: '0'}}>PROGRAMMER</h2>
         </HireMeDiv>
         <CTAWrapper>
