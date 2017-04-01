@@ -6,6 +6,9 @@ import Footer from './Footer';
 import Skill from './Skill';
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 

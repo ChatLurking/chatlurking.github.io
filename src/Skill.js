@@ -4,12 +4,13 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 750px;
   background: #222;
   padding: 20px 0;
 
   @media(max-width: 480px) {
     flex-direction: column;
+    max-width: 250px;
   }
 `;
 
@@ -21,6 +22,9 @@ const H3 = styled.h3`
 
 const LanguageWrapper = styled.div`
   color: #FFF;
+  @media(max-width: 480px) {
+    padding: 10px 15px;
+  }
 `;
 
 const UL = styled.ul`
@@ -30,7 +34,7 @@ const UL = styled.ul`
 
   @media(max-width: 480px) {
     text-align: left;
-    padding: 0;
+    padding: 10px 0;
   }
 `;
 

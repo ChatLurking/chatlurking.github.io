@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   height: 450px;
   color: #FFF;
   margin: 0;
+  width: 100%;
   padding: 30px;
   overflow: hidden;
   margin-bottom: 350px;
