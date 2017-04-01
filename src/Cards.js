@@ -66,7 +66,7 @@ const Separator = styled.div`
 `;
 
 const Cards = (props) => {
-  if (props.side === 'right' || props.size === 'mobile'){
+  if (props.side === 'right' || props.mobile < 480){
     return (
       <Wrapper>
         <Image src={props.src} alt='' />

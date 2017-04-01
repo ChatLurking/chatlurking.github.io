@@ -13,12 +13,27 @@ const Wrapper = styled.div`
 
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      w: 0,
+    };
+  }
+  componentDidMount() {
+    const width = document.getElementById('wrapper').clientWidth;
+    this.setState({
+      w: width,
+    });
+  }
   render() {
     return (
       <Wrapper>
-        <Header />
+        <Header id='wrapper' />
         <Skill />
-        <Projects />
+        <Projects
+          mobile={this.state.w}
+          />
         <Footer />
       </Wrapper>
     );

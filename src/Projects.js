@@ -62,13 +62,14 @@ const project = [
   },
 ];
 
-const Projects = () => {
-  let ProjectList = project.map((item) => {
+const Projects = (props) => {
+  const ProjectList = project.map((item) => {
     if(item.id % 2 === 0){
       return (
         <Cards
           id={item.id}
           side='left'
+          mobile={props.mobile}
           src={item.image}
           title={item.name}
           text={item.desc}
