@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Scroll from 'react-scroll';
 import Brand from './assets/brand.png';
 
 const Wrapper = styled.div`
@@ -74,44 +73,6 @@ const H1 = styled.h1`
   }
 `;
 
-const Button = styled.button`
-  background: transparent;
-  color: #FFF;
-  font-size: 1.25rem;
-  width: 300px;
-  height: 40px;
-  border: solid;
-  border-color: #FFF;
-  border-radius: 20px;
-  text-align: center;
-  vertical-align: middle;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
-`;
-
-const ButtomLM = styled(Button)`
-  &:after {
-    opacity: 1;
-  }
-
-  &:before {
-    content: '↓';
-    position:absolute;
-    opacity: 0;
-  }
-
-  &:hover&:before {
-    opacity: 1;
-    width: 230px;
-  }
-
-  &:hover {
-    background: #FFF;
-    color: #000;
-  }
-`;
-
 const ButtonHire = styled.a`
   display: flex;
   justify-content: center;
@@ -128,31 +89,7 @@ const ButtonHire = styled.a`
   color: #000;
 `;
 
-const scroll = Scroll.animateScroll;
 class Header extends Component {
-  constructor() {
-    super();
-    this.animatedScrolling = this.animatedScrolling.bind(this);
-
-    this.state = {
-      h: 0,
-    };
-  }
-
-  componentDidMount() {
-    const height = document.getElementById('container').clientHeight + 350;
-    this.setState({
-      h: height,
-    });
-  }
-
-  animatedScrolling() {
-    scroll.scrollTo(this.state.h, {
-      duration: 1000,
-      smooth: true,
-    });
-  }
-
   render() {
     return (
       <Wrapper id="container">
@@ -163,7 +100,6 @@ class Header extends Component {
         <CTAWrapper>
           <H1>ANNE GLINES</H1>
           <ButtonHire href="mailto:anneglines@gmail.com?subject=Let's work together"><span>Hire me</span></ButtonHire>
-          <ButtomLM onClick={this.animatedScrolling}>Learn More</ButtomLM>
         </CTAWrapper>
       </Wrapper>
     );
