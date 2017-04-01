@@ -10,13 +10,13 @@ const Wrapper = styled.div`
   justify-content: space-around;
   background: #222;
   width: 100%;
+  padding: 20px 0;
 `;
 
 const Button = styled.a`
   background: transparent;
   border: none;
   color: #FFF;
-  padding: 20px 0;
   cursor: pointer;
 `;
 
@@ -26,14 +26,17 @@ const ButtonHM = styled.a`
   align-items: center;
   font-size: 1.25rem;
   width: 300px;
-  height: 40px;
+  height: 34px;
   border: solid;
   border-radius: 20px;
-  margin-bottom: 15px;
   cursor: pointer;
   background: #D9AA63;
   border-color: #D9AA63;
   color: #000;
+
+  @media(max-width: 480px) {
+    width: 250px;
+  }
 `;
 
 const Footer = () => {
@@ -42,7 +45,7 @@ const Footer = () => {
         <Button href="https://github.com/chatlurking">
           <FontAwesome
             name='github'
-            size='4x'
+            size='3x'
             />
         </Button>
         <ButtonHM href="mailto:anneglines@gmail.com?subject=Let's work together"><span>Hire me</span></ButtonHM>

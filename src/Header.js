@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   color: #FFF;
   margin: 0;
   width: 100%;
-  padding: 30px;
   overflow: hidden;
   margin-bottom: 350px;
 
@@ -119,7 +118,7 @@ const ButtonHire = styled.a`
   align-items: center;
   font-size: 1.25rem;
   width: 300px;
-  height: 40px;
+  height: 34px;
   border: solid;
   border-radius: 20px;
   margin-bottom: 15px;
