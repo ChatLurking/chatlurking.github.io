@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   width: 750px;
   background: #222;
   padding: 20px 0;
+  box-shadow: 5px 5px 2px #444;
 
   @media(max-width: 480px) {
     flex-direction: column;
