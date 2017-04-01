@@ -13,6 +13,11 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 250px;
   }
+
+  @media(max-width: 720px) {
+    flex-direction: column;
+    width: 250px;
+  }
 `;
 
 const H3 = styled.h3`
@@ -23,9 +28,10 @@ const H3 = styled.h3`
 
 const LanguageWrapper = styled.div`
   color: #FFF;
-  @media(max-width: 480px) {
+  @media(max-width: 720px) {
     padding: 10px 15px;
   }
+
 `;
 
 const UL = styled.ul`
@@ -33,7 +39,7 @@ const UL = styled.ul`
   padding: 2px 0px;
   margin: 2px 0px;
 
-  @media(max-width: 480px) {
+  @media(max-width: 720px) {
     text-align: left;
     padding: 10px 0;
   }
@@ -52,7 +58,6 @@ const LeftUL = styled(UL)`
 
 const RightUL = styled(UL)`
   text-align: right;
-  padding-left: 60px;
 `;
 
 const CenterUL = styled(UL)`
