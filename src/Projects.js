@@ -23,7 +23,7 @@ const project = [
     name: 'Personal Website',
     // background: '#000',
     image: Website,
-    desc: "This website is made in React using create-react-app. This is design number 38 (or so). The design for this website was thought up by spending way to many hours scrolling through Dribbble and gathering ideas that I liked. The best example of using React for it's ability to componentize aspects in a design is this project display area. I give the main component an array of the project data, and get back 6 fully styled cards.",
+    desc: "This website is made in React using create-react-app. This is design number 38 (or so). The design for this website was thought up by spending way to many hours scrolling through Dribbble and gathering ideas that I liked. The best example of using React for it's ability to componentize aspects in a design is this project display area. In App.js I use life cycle methods to make the cards react to screen size changes (going from full screen to smaller views).",
   },
   {
     id: 1,

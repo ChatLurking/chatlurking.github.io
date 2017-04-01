@@ -16,20 +16,34 @@ class App extends Component {
 
   constructor() {
     super();
+    this.updateWidth = this.updateWidth.bind(this);
+
     this.state = {
       w: 0,
     };
   }
   componentDidMount() {
-    const width = document.getElementById('wrapper').clientWidth;
+    window.addEventListener('resize', this.updateWidth);
+    const width = window.innerWidth;
     this.setState({
       w: width,
     });
   }
+
+  componentWillUnmoutn() {
+    window.removeEventListener('resize', this.updateWidth);
+  }
+
+  updateWidth() {
+    this.setState({
+      w: window.innerWidth,
+    });
+  }
+
   render() {
     return (
       <Wrapper>
-        <Header id='wrapper' />
+        <Header />
         <Skill />
         <Projects
           mobile={this.state.w}
